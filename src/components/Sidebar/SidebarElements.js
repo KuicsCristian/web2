@@ -14,10 +14,10 @@ export const SidebarContainer = styled.aside`
     top: 0;
     left: 0;
     transition: 0.3s ease-in-out;
-    // //if sidebar is opened then opacity is 100% else zero
-    // opacity: ${({ isOpen}) => (isOpen ? '100%' : '0')};
-    // //if sidebar is opened then top display zero else go down 100%
-    // top: ${({ isOpen}) => (isOpen ? '0%' : '-100%')};
+      //if sidebar is opened then opacity is 100% else zero
+    opacity: ${({ isOpen}) => (isOpen ? '100%' : '0')};
+      //if sidebar is opened then top display zero else go down 100%
+    top: ${({ isOpen}) => (isOpen ? '0%' : '-100%')};
 `;
 
 export const CloseIcon = styled(FaTimes)`
@@ -36,6 +36,17 @@ export const Icon = styled.div`
 
 export const SidebarWrapper = styled.div`
     color: #fff;
+`;
+
+export const SidebarMenu = styled.ul`
+    display: grid;
+    grid-template-colums: 1fr;
+    grid-template-rows: repeat(6, 80px);
+    text-align: center;
+
+    @media screenn and (max-width: 480px){
+        grid-template-rows: repeat(6, 60px);
+    };
 `;
 
 export const SidebarLink = styled(LinkScroll)`
@@ -62,9 +73,9 @@ export const SideBtnWrap = styled.div`
 `;
 
 export const SidebarRoute = styled(LinkRouter)`
-    color: #010606;
+    
     border-radius: 50px;
-    background: #01nf71;
+    background: #01bf71;
     white-space: nowrap;
     padding: 16px 64px;
     font-size: 16px;
@@ -78,5 +89,5 @@ export const SidebarRoute = styled(LinkRouter)`
         transition: all 0.2s all-in-out;
         background: #fff;
         color: #010606;
-    }
+    };
 `;
