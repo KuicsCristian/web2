@@ -1,7 +1,7 @@
 import React from 'react'
-import { Button } from '../ButtonElements'
+import {Button} from '../ButtonElements'
 import { InfoContainer,InfoWrapper,InfoRow,Column1,Column2,TextWrapper,TopLine,Heading,Subtitle,BtnWrap,ImgWrap,Img} from './InfoElements';
-
+import Img1 from '../../images/svg-1.svg';
 
 const InfoSection = ({lightBg,id,imgStart,topLine,lightText,darkText,headline,description,buttonLabel,img,alt,primary,dark,dark2}) => {
     return (
@@ -20,7 +20,7 @@ const InfoSection = ({lightBg,id,imgStart,topLine,lightText,darkText,headline,de
                                 duration={500}
                                 spy={true}
                                 exact="true"
-                                offset={-80}
+                               
                                 primary={primary ? 1 : 0}
                                 dark={dark ? 1 : 0}
                                 dark2={dark2 ? 1 : 0}> 
@@ -30,7 +30,7 @@ const InfoSection = ({lightBg,id,imgStart,topLine,lightText,darkText,headline,de
                        </Column1>
                         <Column2>
                             <ImgWrap>
-                                <Img src={img} type='svg/png'alt={alt}/>
+                            <Img src={Img1}  alt={alt}/>
                             </ImgWrap>
                         </Column2>
                    </InfoRow>
@@ -40,4 +40,4 @@ const InfoSection = ({lightBg,id,imgStart,topLine,lightText,darkText,headline,de
     )
 }
 
-export default InfoSection
+export default InfoSection;
